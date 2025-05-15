@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>קמפינג בכנרת</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Merriweather', serif;
       background-color: #f6f9f8;
       color: #333;
+    }
+
+    /* מסך פתיחה */
+    #landing-screen {
+      position: fixed;
+      inset: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 1s ease;
+    }
+
+    #enter-button {
+      font-size: 5rem;
+      padding: 40px 70px;
+      background: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    #enter-button:hover {
+      transform: scale(1.08);
     }
 
     header {
@@ -78,6 +107,13 @@
   </style>
 </head>
 <body>
+
+  <!-- מסך פתיחה -->
+  <div id="landing-screen">
+    <button id="enter-button">6.6</button>
+  </div>
+
+  <!-- תוכן האתר -->
   <header>
     <h1>קמפינג בכנרת – חוויה של טבע וחברים 🌅</h1>
   </header>
@@ -109,6 +145,7 @@
   </section>
 
   <script>
+    // ניווט בין טאבים
     const buttons = document.querySelectorAll('.tab-btn');
     const tabs = document.querySelectorAll('.tab-content');
 
@@ -116,10 +153,16 @@
       btn.addEventListener('click', () => {
         buttons.forEach(b => b.classList.remove('active'));
         tabs.forEach(t => t.classList.remove('active'));
-
         btn.classList.add('active');
         document.getElementById(btn.dataset.tab).classList.add('active');
       });
+    });
+
+    // מסך פתיחה
+    document.getElementById('enter-button').addEventListener('click', () => {
+      const landing = document.getElementById('landing-screen');
+      landing.style.opacity = '0';
+      setTimeout(() => landing.style.display = 'none', 1000);
     });
   </script>
 </body>

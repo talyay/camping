@@ -104,6 +104,27 @@
       border-radius: 12px;
       margin-bottom: 1rem;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: right;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    td[contenteditable="true"] {
+      background-color: #fff8e1;
+      cursor: text;
+    }
   </style>
 </head>
 <body>
@@ -121,6 +142,7 @@
   <nav>
     <button class="tab-btn active" data-tab="equipment">🎒 רשימת ציוד</button>
     <button class="tab-btn" data-tab="location">📍 על המקום</button>
+    <button class="tab-btn" data-tab="assign">🧑‍🤝‍🧑 מי מביא מה</button>
   </nav>
 
   <section id="equipment" class="tab-content active">
@@ -141,7 +163,30 @@
       מקום הקמפינג שלנו נמצא בצפון הכנרת, בחוף קסום עם עצים, צל ומים צלולים.
       יש שירותים, מקלחות, ואפילו שקעי חשמל.
     </p>
-    <p><a href="https://www.gocamping.co.il/articles/קמפינג-בכנרת-המדריך-השלם-לחופשה-באוהל/">צפה במפה</a></p>
+    <p><a href="https://www.gocamping.co.il/articles/קמפינג-בכנרת-המדריך-השלם-לחופשה-באוהל/" target="_blank">צפה במפה</a></p>
+  </section>
+
+  <section id="assign" class="tab-content">
+    <h2>מי מביא מה</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>פריט</th>
+          <th>מי מביא</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>אוהל</td><td contenteditable="true"></td></tr>
+        <tr><td>גזייה</td><td contenteditable="true"></td></tr>
+        <tr><td>צידנית</td><td contenteditable="true"></td></tr>
+        <tr><td>מחצלת</td><td contenteditable="true"></td></tr>
+        <tr><td>פנס</td><td contenteditable="true"></td></tr>
+        <tr><td>מים</td><td contenteditable="true"></td></tr>
+        <tr><td>בירה</td><td contenteditable="true"></td></tr>
+        <tr><td>רמקול</td><td contenteditable="true"></td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.9rem; color: gray;">* אפשר ללחוץ ולערוך את העמודה של \"מי מביא\"</p>
   </section>
 
   <script>

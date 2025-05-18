@@ -1,71 +1,445 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>קמפינג במכמורת</title>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>קמפינג במכמורת</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <div id="landing-screen">
-    <button id="enter-button">6.6</button>
-  </div>
+  
+    <div id="landing-screen">
+        <button id="enter-button">6.6</button>
+    </div>
 
+  
+    <header>
+        <h1>🌅 קמפינג במכמורת</h1>
+    </header>
 
-  <header>
-    <h1>קמפינג במכמורת🌅</h1>
-  </header>
+    <nav>
+        <button class="tab-btn active" data-tab="equipment">🎒 רשימת ציוד</button>
+        <button class="tab-btn" data-tab="location">📍 על המקום</button>
+        <button class="tab-btn" data-tab="assign">🧑‍🤝‍🧑 מי מביא מה</button>
+    </nav>
 
-  <nav>
-    <button class="tab-btn active" data-tab="equipment">🎒 רשימת ציוד</button>
-    <button class="tab-btn" data-tab="location">📍 על המקום</button>
-    <button class="tab-btn" data-tab="assign">🧑‍🤝‍🧑 מי מביא מה</button>
-  </nav>
+    <section id="equipment" class="tab-content active">
+        <h2>רשימת ציוד</h2>
+        <ul>
+            <li>צריך</li>
+            <li>לכתוב</li>
+            <li>רשימת</li>
+            <li>ציוד</li>
+        </ul>
+    </section>
 
-  <section id="equipment" class="tab-content active">
-    <h2>רשימת ציוד</h2>
-    <ul>
-      <li>צריך</li>
-      <li>לכתוב</li>
-      <li>רשימת</li>
-      <li>ציוד</li>
-    </ul>
-  </section>
+    <section id="location" class="tab-content">
+        <h2>על המקום</h2>
+        <img class="placeholder" src="Screenshot 2025-05-18 at 12.14.32.png" alt="חוף מכמורת">
+        <p>
+              מיקום הקמפינג שלנו הוא במכמורת. אני בחיים לא הייתי שם, אבל יהיה נדיר.
+            </p>
+        <p>
+            <a href="https://he.wikipedia.org/wiki/מכמורת" target="_blank">לידיעתכם</a>
+        </p>
+    </section>
 
-  <section id="location" class="tab-content">
-    <h2>על המקום</h2>
-    <img class="placeholder" src="Screenshot 2025-05-18 at 12.14.32.png" alt="חוף מכמורת">
-    <p>
-      מיקום הקמפינג שלנו הוא במכמורת. אני בחיים לא הייתי שם, אבל יהיה נדיר.
-    </p>
-    <p><a href="https://he.wikipedia.org/wiki/מכמורת" target="_blank">לידיעתכם</a></p>
-  </section>
+    <section id="assign" class="tab-content">
+        <h2>מי מביא מה</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>פריט</th>
+                    <th>מי מביא</th>
+                </tr>
+            </thead>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🍽️ אוכל</th>
+            </tr>
+            <tr>
+                <td>פיתות</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>חומוס</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>סלטים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>חמוצים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שתייה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>בשר</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>ירקות לעל האש</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>כוסות חד"פ לשתייה קלה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>נייר סופג</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מרשמלו + שיפודים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>קורנפלקס</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>חלב</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>חטיפים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מתוקים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>ערק, בירות, לימונים (אלכוהול)</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>2 שישיות מים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>בצל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שמן</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>יין</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מבעיר פחמים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>תבניות אלומיניום</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>רגליים למנגל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שתייה מתוקה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>לימונצ'לו</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>קרח</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>ביצים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>רסק עגבניות (לשקשוקה)</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>בלילה לפנקייק</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>לחשוב על אוכל לשבת</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🔧 ציוד כללי</th>
+            </tr>
+            <tr>
+                <td>אוהלים (2)</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>קלפים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מיקאסה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>משאבה למיקאסה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מחצלת גדולה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>צילייה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>צידנית גדולה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>קרחונים לצידנית</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מנגל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>פחמים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מדליק פחמים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>גפרורים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>פקל קפה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>פקל מנגל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מלקחיים למנגל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>נייר כסף</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שקית/קופסה לכלי עבודה מלוכלכים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שולחן מתקפל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>תאורה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>כסאות מתקפלים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מזרון מתנפח</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>פנסים / גרילנדה / תאורה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>אלטוש</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שקיות אשפה גדולות</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מטקות</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>בוקסה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שש בש</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>נפנף למנגל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>צלחת מעופפת</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>תבניות אלומיניום</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>נייר סופג</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שקיות זבל</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🧳 ציוד אישי</th>
+            </tr>
+            <tr>
+                <td>קרם הגנה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מגבת</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מגבת חוף</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מברשת שיניים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>צלחת רב פעמית</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>סכום רב פעמי</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>בגדים ארוכים ללילה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>נייר טואלט</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מגבונים לקקי</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>כרית</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>שמיכה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מזרן</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🛁 ניקיון והיגיינה</th>
+            </tr>
+            <tr>
+                <td>סבון וספוג לכלים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>ספריי נגד יתושים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מגבונים לחים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>ג'ל אלכוהול (אם רוצים להוסיף)</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🩹 בטיחות ובריאות</th>
+            </tr>
+            <tr>
+                <td>ערכת עזרה ראשונה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>אטמי אוזניים / מסכת שינה (לא חובה, רק אם רלוונטי)</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🧉 שתייה חמה / בוקר</th>
+            </tr>
+            <tr>
+                <td>פקל קפה ☕</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>קפה תה סוכר</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">📱 חשמל וטעינה</th>
+            </tr>
+            <tr>
+                <td>מטען נייד</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>נייר למטען / מפצל (אם התכוונת לזה) 🆕</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <th colspan="2" style="background:#e0e0e0;">🎲 בידור ותחביבים</th>
+            </tr>
+            <tr>
+                <td>כיף כיף</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>ששבש</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>מטקות</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>חתולים מתפוצצים</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>גיטרה</td>
+                <td contenteditable="true"></td>
+            </tr>
+            <tr>
+                <td>צלחת מעופפת</td>
+                <td contenteditable="true"></td>
+            </tr>
 
-  <section id="assign" class="tab-content">
-    <h2>מי מביא מה</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>פריט</th>
-          <th>מי מביא</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>אוהל</td><td contenteditable="true"></td></tr>
-        <tr><td>גזייה</td><td contenteditable="true"></td></tr>
-        <tr><td>צידנית</td><td contenteditable="true"></td></tr>
-        <tr><td>מחצלת</td><td contenteditable="true"></td></tr>
-        <tr><td>פנס</td><td contenteditable="true"></td></tr>
-        <tr><td>אוכל</td><td contenteditable="true"></td></tr>
-        <tr><td>בוקסה</td><td contenteditable="true"></td></tr>
-        <tr><td>צריך לשבת על הרשמצ...</td><td contenteditable="true"></td></tr>
-      </tbody>
-    </table>
-    <p style="font-size: 0.9rem; color: gray;"> אפשר ללחוץ ולערוך את העמודה של מי מביא</p>
-  </section>
+        </table>
+        <p style="font-size: 0.9rem; color: gray;">* אפשר ללחוץ ולערוך את העמודה של "מי מביא"</p>
+    </section>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

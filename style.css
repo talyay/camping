@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  background-color: #f6f9f8;
+  color: #333;
+}
+
+#landing-screen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#enter-button {
+  font-size: 5rem;
+  padding: 40px 70px;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#enter-button:hover {
+  transform: scale(1.08);
+}
+
+header {
+  background: url('Screenshot 2025-05-18 at 12.14.32.png') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  font-size: 6vw;
+  background-color: rgba(0,0,0,0.4);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  flex-wrap: wrap;
+}
+
+nav button {
+  background: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover, nav button.active {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.tab-content.active {
+  display: block;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: square;
+  padding-right: 1.5rem;
+}
+
+img.placeholder {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  overflow-x: auto;
+  display: block;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: right;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+td[contenteditable="true"] {
+  background-color: #fff8e1;
+  cursor: text;
+}

@@ -1,98 +1,117 @@
+/* כללי */
 body {
   margin: 0;
   font-family: 'Merriweather', serif;
   background-color: #f6f9f8;
   color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+body.dark {
+  background-color: #222;
+  color: #ddd;
 }
 
+/* מסך פתיחה */
 #landing-screen {
   position: fixed;
   inset: 0;
-  background: black;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   transition: opacity 1s ease;
 }
-
 #enter-button {
   font-size: 5rem;
   padding: 40px 70px;
-  background: white;
+  background: #fff;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  color: black;
+  color: #000;
   font-weight: bold;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(255,255,255,0.3);
   transition: transform 0.3s ease;
 }
-
 #enter-button:hover {
   transform: scale(1.08);
 }
 
+/* כותרת */
 header {
-  background: url('Screenshot 2025-05-18 at 12.14.32.png') no-repeat center center/cover;
+  background: url('Screenshot 2025-05-18 at 12.14.32.png') no-repeat center/cover;
   padding: 60px 20px;
   text-align: center;
-  color: white;
+  color: #fff;
 }
-
 header h1 {
-  font-size: 6vw;
-  background-color: rgba(0,0,0,0.4);
   display: inline-block;
+  background: rgba(0,0,0,0.4);
   padding: 10px 20px;
+  font-size: 6vw;
   border-radius: 12px;
   white-space: nowrap;
 }
+body.dark header h1 {
+  background: rgba(0,0,0,0.7);
+}
 
+/* ניווט טאבים */
 nav {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #fff;
+  background: #fff;
   border-bottom: 1px solid #ccc;
   flex-wrap: wrap;
 }
-
 nav button {
+  flex: 1 1 auto;
   background: none;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-  flex: 1 1 auto;
+  transition: background 0.3s;
   text-align: center;
 }
-
-nav button:hover,
-nav button.active {
-  background-color: rgba(0,0,0,0.05);
+nav button.active,
+nav button:hover {
+  background: rgba(0,0,0,0.05);
+}
+body.dark nav {
+  background: #333;
+  border-color: #444;
+}
+body.dark nav button {
+  color: #ddd;
+}
+body.dark nav button.active,
+body.dark nav button:hover {
+  background: rgba(255,255,255,0.1);
 }
 
+/* טאבים */
 .tab-content {
   display: none;
-  padding: 16px;
   max-width: 900px;
-  margin: auto;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
 }
-
 .tab-content.active {
   display: block;
-  background-color: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+body.dark .tab-content {
+  background: #333;
+  color: #ddd;
 }
 
-ul {
-  list-style-type: square;
-  padding-right: 1.5rem;
-}
-
+/* תמונה */
 img.placeholder {
   width: 100%;
   max-height: 300px;
@@ -101,27 +120,85 @@ img.placeholder {
   margin-bottom: 1rem;
 }
 
+/* כלים */
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.controls input,
+.controls button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.controls input {
+  flex: 1;
+  border-color: #aaa;
+}
+.controls button {
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+body.dark .controls input {
+  background: #444;
+  border-color: #555;
+  color: #ddd;
+}
+body.dark .controls button {
+  background: #ddd;
+  color: #000;
+}
+
 /* טבלה */
+.table-wrap {
+  overflow-x: auto;
+}
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  overflow-x: auto;
-  display: block;
 }
-
-th, td {
+thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 8px;
   border: 1px solid #ccc;
-  padding: 10px;
-  text-align: right;
-  min-width: 100px;
+  z-index: 1;
+}
+tbody tr:nth-child(odd) {
+  background: #fafafa;
+}
+tbody tr:nth-child(even) {
+  background: #fff;
+}
+body.dark thead th {
+  background: #444;
+}
+body.dark tbody tr:nth-child(odd) {
+  background: #444;
+}
+body.dark tbody tr:nth-child(even) {
+  background: #555;
+}
+td, th {
+  padding: 8px;
+  border: 1px solid #ccc;
+  min-width: 120px;
+}
+body.dark td, body.dark th {
+  border-color: #666;
 }
 
-th {
-  background-color: #f0f0f0;
+/* dropdown ו-checkbox */
+select {
+  width: 100%;
 }
-
-td[contenteditable="true"] {
-  background-color: #fff8e1;
-  cursor: text;
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
 }
